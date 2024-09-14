@@ -1,4 +1,4 @@
-#Algorithms and Data Structure Implementation
+Algorithms and Data Structure Implementation
 Welcome to the Algorithms and Data Structures Implementation repository. This project is focused on practicing and improving skills in implementing various algorithms and data structures in a structured and systematic way. Whether you're preparing for technical interviews, learning new techniques, or just looking to brush up on your skills, this repository provides a hands-on learning experience.
 
 📜 Purpose
