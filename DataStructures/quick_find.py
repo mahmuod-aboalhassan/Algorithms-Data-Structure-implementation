@@ -1,5 +1,5 @@
-# A simple algorithm for solving connected components using Quick Find.
-# This is not the most efficient algorithm for large datasets as the union operation takes O(N) time.
+# A simple data structure for solving connected components using Quick Find.
+# This is not the most efficient data structure  for large datasets as the union operation takes O(N) time.
 
 class Quick_Find:
     # Constructor to initialize the array where each element is its own component initially
