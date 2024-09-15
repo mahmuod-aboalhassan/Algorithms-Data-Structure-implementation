@@ -25,20 +25,20 @@ class Quick_Find:
                 self.arr[i] = qid
 
 # Instantiate Quick_Find with 10 elements (0 through 9)
-uf = Quick_Find(10)
+qf = Quick_Find(10)
 
 # Perform union operations to connect elements
-uf.union(1, 2)  # Connect component containing 1 with component containing 2
-uf.union(3, 4)  # Connect component containing 3 with component containing 4
-uf.union(1, 4)  # Connect component containing 1 (and thus 2) with component containing 4 (and thus 3)
-uf.union(5, 6)  # Connect component containing 5 with component containing 6
-uf.union(5, 9)  # Connect component containing 5 (and thus 6) with component containing 9
-uf.union(0, 5)  # Connect component containing 0 with component containing 5 (and thus 6, 9)
-uf.union(7, 8)  # Connect component containing 7 with component containing 8
-uf.union(7, 0)  # Connect component containing 7 (and thus 8) with component containing 0 (and thus 5, 6, 9)
+qf.union(1, 2)  # Connect component containing 1 with component containing 2
+qf.union(3, 4)  # Connect component containing 3 with component containing 4
+qf.union(1, 4)  # Connect component containing 1 (and thus 2) with component containing 4 (and thus 3)
+qf.union(5, 6)  # Connect component containing 5 with component containing 6
+qf.union(5, 9)  # Connect component containing 5 (and thus 6) with component containing 9
+qf.union(0, 5)  # Connect component containing 0 with component containing 5 (and thus 6, 9)
+qf.union(7, 8)  # Connect component containing 7 with component containing 8
+qf.union(7, 0)  # Connect component containing 7 (and thus 8) with component containing 0 (and thus 5, 6, 9)
 
 # Output the current state of the array, which represents the connected components
-print(uf.arr)  # Expected output: [9, 4, 4, 4, 4, 9, 9, 9, 9, 9]
+print(qf.arr)  # Expected output: [9, 4, 4, 4, 4, 9, 9, 9, 9, 9]
 
 # Explanation:
 # Elements that are in the same component will have the same value in the array.
