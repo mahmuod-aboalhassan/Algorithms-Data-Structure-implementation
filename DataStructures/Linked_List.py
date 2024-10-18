@@ -28,18 +28,26 @@ class ListNode(object):
 
         if current_node is None:
             print(f"Index {idx} is out of bounds.")
-        else:
-            new_node.next = current_node.next
-            current_node.next = new_node
-            print(f"Inserted node with value {value} at position {idx}.")
+            return self  # Return the unchanged list
+
+        new_node.next = current_node.next
+        current_node.next = new_node
+        print(f"Inserted node with value {value} at position {idx}.")
         
         return self  # Return head of the list
-    # next implementing the Removing and replacing also 
+    
+    def pop(self):
+        if not self.next:
+            raise ValueError("Cannot pop from an empty list or last node")
+        item = self.next.val
+        self.next = self.next.next
+        return item
+    
+    def push(self, item):
+        self.next = ListNode(item, self.next)
 
 # Example to create the list from the array
 arr = [1, 2, 3, 4, 5, 6, 7]
-
-# Initialize the "next_node" as None because the last node will have no next node
 next_node = None
 
 # We iterate over the array in reverse to construct the linked list
@@ -47,7 +55,6 @@ for val in reversed(arr):
     current_node = ListNode(val, next_node)
     next_node = current_node
 
-# At the end of the loop, next_node will point to the head of the linked list
 node = next_node
 
 # Print the original list
